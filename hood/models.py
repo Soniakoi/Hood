@@ -35,4 +35,24 @@ class Profile(models.Model):
   def delete_neighbour(self):
     self.delete()
 
+class Business(models.Model):
+  name=models.CharField(max_length=50)
+  user=models.ForeignKey(User,on_delete=models.CASCADE)
+  neighborhood=models.ForeignKey(Neighborhood,on_delete=models.CASCADE)
+  description=HTMLField()
+  business_mail=models.CharField(max_length=100)
+
+  def __str__(self):
+    return self.name
+  def save_business(self):
+    self.save()
+  def delete_business(self):
+    self.delete()
+
+  @classmethod
+  def search_business(cls,search_name):
+    results = cls.objects.filter(name__icontains=search_name)
+    return results    
+
+     
 
