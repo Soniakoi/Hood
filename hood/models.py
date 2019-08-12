@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Neighbourhood(models.Model):
@@ -39,7 +40,7 @@ class Business(models.Model):
   name=models.CharField(max_length=50)
   user=models.ForeignKey(User,on_delete=models.CASCADE)
   neighbourhood=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
-  # description=HTMLField()
+  description=HTMLField()
   business_mail=models.CharField(max_length=100)
 
   def __str__(self):
