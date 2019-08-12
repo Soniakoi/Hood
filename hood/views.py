@@ -3,4 +3,5 @@ from django.http import HttpResponse,Http404
 
 # Create your views here.
 def welcome(request):
-  return render(request, 'welcome.html')
+  title = 'hood'
+  return render(request, 'welcome.html',{"title":title})

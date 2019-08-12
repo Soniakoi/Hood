@@ -38,8 +38,8 @@ class Profile(models.Model):
 class Business(models.Model):
   name=models.CharField(max_length=50)
   user=models.ForeignKey(User,on_delete=models.CASCADE)
-  neighborhood=models.ForeignKey(Neighborhood,on_delete=models.CASCADE)
-  description=HTMLField()
+  neighbourhood=models.ForeignKey(Neighbourhood,on_delete=models.CASCADE)
+  # description=HTMLField()
   business_mail=models.CharField(max_length=100)
 
   def __str__(self):
