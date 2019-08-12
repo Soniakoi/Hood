@@ -5,3 +5,8 @@ class NewHoodForm(forms.ModelForm):
   class Meta:
     model=Neighbourhood
     fields='__all__'
+
+  class NewProfileForm(forms.ModelForm):
+    class Meta:
+      model=Profile
+      exclude=['user'] 
