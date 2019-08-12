@@ -8,4 +8,4 @@ def welcome(request):
   return render(request, 'welcome.html',{"title":title})
 
 @login_required(login_url='/accounts/login')
-def hoods(request,neighbourhood_id): 
+def hood(request,neighbourhood_id):
