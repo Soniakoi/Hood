@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'hoodp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': '<Your Database Username >',
-    'PASSWORD':'<Your Database Password>',
+        'NAME': 'hood',
+        'USER': 'sonia',
+    'PASSWORD':'Sonia99',
     }
 }
 
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Nairobi/Africa'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
