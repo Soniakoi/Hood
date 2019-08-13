@@ -5,7 +5,13 @@ from django.conf.urls.static import static
 
 urlpatterns=[
   url('^$',views.welcome,name= 'welcome'),
-  url(r'^search/', views.search_business, name='search')
+  url(r'^search/', views.search_business, name='search'),
+  url(r'^new/neighbourhood$',views.new_hood,name='newHood'),
+  url(r'^new/neighbour$',views.new_neighbour,name='newNeighbour'),
+  url(r'^new/business$',views.new_business,name='newBusiness'),
+  url(r'^profile/',views.user_profile,name='userProfile'),
+  url(r'^accounts/',include('registration.backends.simple.urls')),
+  
 ]
 
 if settings.DEBUG:
